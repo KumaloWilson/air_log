@@ -1,3 +1,5 @@
+import 'package:air_log/views/crew_member_module/home/home.dart';
+import 'package:air_log/views/crew_member_module/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -15,7 +17,8 @@ class _CrewMemberNavBarState extends State<CrewMemberNavBar> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = const [
-
+    HomeScreen(),
+    ProfileScreen(),
   ];
 
   @override
@@ -59,14 +62,6 @@ class _CrewMemberNavBarState extends State<CrewMemberNavBar> {
                 GButton(
                   icon: LineIcons.home,
                   text: 'Home',
-                ),
-                GButton(
-                  icon: Icons.calendar_month,
-                  text: 'Schedule',
-                ),
-                GButton(
-                  icon: FontAwesomeIcons.message,
-                  text: 'Chats',
                 ),
                 GButton(
                   icon: LineIcons.user,
