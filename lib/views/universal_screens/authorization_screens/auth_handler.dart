@@ -26,6 +26,7 @@ class _AuthHandlerState extends State<AuthHandler> {
 
   late UserProfileProvider userProfileProvider;
   late UserProfile? userProfileData;
+  final user = FirebaseAuth.instance.currentUser;
 
 
   @override
@@ -42,8 +43,7 @@ class _AuthHandlerState extends State<AuthHandler> {
       userProfileData = userProfileProvider.userProfile;
     });
 
-    if (userProfileData == null) {
-      final user = FirebaseAuth.instance.currentUser;
+    if (userProfileData == null && user != null) {
       final userStoredProfile = await UserProfileServices.fetchUserProfileInformation(user!.uid);
 
       if (userStoredProfile != null) {
