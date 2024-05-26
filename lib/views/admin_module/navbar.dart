@@ -1,3 +1,4 @@
+import 'package:air_log/views/admin_module/crew_check/crew_check_qr_code.dart';
 import 'package:air_log/views/admin_module/home/home.dart';
 import 'package:air_log/views/admin_module/profile/profile.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,8 @@ class _AdminNavBarState extends State<AdminNavBar> {
 
   final List<Widget> _screens = const [
     AdminHomeScreen(),
-    AdminProfileScreen()
+    AdminCrewCheckQRCodeGeneration(),
+    AdminProfileScreen(),
   ];
 
   @override
@@ -62,6 +64,10 @@ class _AdminNavBarState extends State<AdminNavBar> {
                 GButton(
                   icon: LineIcons.home,
                   text: 'Home',
+                ),
+                GButton(
+                  icon: LineIcons.qrcode,
+                  text: 'QR Scan',
                 ),
                 GButton(
                   icon: LineIcons.user,

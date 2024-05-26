@@ -1,6 +1,7 @@
 class UserProfile {
   late String userId;
   late String fullName;
+  late String? displayImage;
   late String emailAddress;
   late String phoneNumber;
   late List<String> userRoles;
@@ -18,6 +19,7 @@ class UserProfile {
     required this.emailAddress,
     required this.phoneNumber,
     required this.userRoles,
+    this.displayImage,
     required this.staffNumber,
     required this.isAccountActive,
     required this.dob,
@@ -34,6 +36,7 @@ class UserProfile {
       'email_address': emailAddress,
       'phone_number': phoneNumber,
       'user_roles': userRoles,
+      'display_image': displayImage,
       'active': isAccountActive,
       'staff_number': staffNumber,
       'dob': dob,
@@ -54,6 +57,7 @@ class UserProfile {
       isAccountActive: json['active'],
       staffNumber: json['staff_number'],
       dob: json['dob'],
+      displayImage: json['display_image'] ?? '',
       address: json['address'],
       city: json['city'],
       state: json['state'],

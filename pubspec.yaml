@@ -69,6 +69,7 @@ dependencies:
   flutter_tts: ^4.0.2
   qr_code_scanner: ^1.0.1
   one_clock: ^2.0.1
+  flutter_slidable: ^3.1.0
 
 
 dev_dependencies:
