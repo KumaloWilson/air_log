@@ -54,7 +54,7 @@ class CustomConfirmationDialog extends StatelessWidget {
                 Expanded(
                   flex: 3,
                   child: CustomButton(
-                      btnColor: Pallete.primaryColor,
+                      btnColor: Theme.of(context).disabledColor,
                       width: double.infinity,
                       borderRadius: 10,
                       onTap: onNoTap,
@@ -75,7 +75,7 @@ class CustomConfirmationDialog extends StatelessWidget {
                 Expanded(
                   flex: 3,
                   child: CustomButton(
-                      btnColor: Theme.of(context).disabledColor,
+                      btnColor: Pallete.primaryColor,
                       width: double.infinity,
                       borderRadius: 10,
                       onTap: onYesConfirmTap,
