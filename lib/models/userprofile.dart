@@ -4,10 +4,9 @@ class UserProfile {
   late String emailAddress;
   late String phoneNumber;
   late List<String> userRoles;
-  late bool salesAgentVerified;
-  late bool deliveryAgentVerified;
-  late bool distributorVerified;
+  late bool isAccountActive;
   late String dob;
+  late String staffNumber;
   late String address;
   late String city;
   late String state;
@@ -19,9 +18,8 @@ class UserProfile {
     required this.emailAddress,
     required this.phoneNumber,
     required this.userRoles,
-    required this.salesAgentVerified,
-    required this.deliveryAgentVerified,
-    required this.distributorVerified,
+    required this.staffNumber,
+    required this.isAccountActive,
     required this.dob,
     required this.address,
     required this.city,
@@ -36,9 +34,8 @@ class UserProfile {
       'email_address': emailAddress,
       'phone_number': phoneNumber,
       'user_roles': userRoles,
-      'sales_agent_verified': salesAgentVerified,
-      'delivery_agent_verified': deliveryAgentVerified,
-      'distributor_verified': distributorVerified,
+      'active': isAccountActive,
+      'staff_number': staffNumber,
       'dob': dob,
       'address': address,
       'city': city,
@@ -54,9 +51,8 @@ class UserProfile {
       emailAddress: json['email_address'],
       phoneNumber: json['phone_number'],
       userRoles: List<String>.from(json['user_roles']),
-      salesAgentVerified: json['sales_agent_verified'],
-      deliveryAgentVerified: json['delivery_agent_verified'],
-      distributorVerified: json['distributor_verified'],
+      isAccountActive: json['active'],
+      staffNumber: json['staff_number'],
       dob: json['dob'],
       address: json['address'],
       city: json['city'],

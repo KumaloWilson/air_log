@@ -190,8 +190,7 @@ class AuthServices {
           fcmToken: newFCMToken,
         );
 
-        await ChatServices.updateParticipantFcmTokenInTheDB(
-            participantId: user.uid, updatedFcmToken: newFCMToken);
+        //await FlightServices.updateParticipantFcmTokenInTheDB(participantId: user.uid, updatedFcmToken: newFCMToken);
       }
     } else {
       _logger.e('USER ROLE NOT SET');
