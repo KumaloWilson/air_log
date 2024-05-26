@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "123016200143",
+    "project_id": "air-log-f90a2",
+    "storage_bucket": "air-log-f90a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123016200143:android:f930816f602ececec01cba",
+        "android_client_info": {
+          "package_name": "com.airlog.airzim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123016200143-v7lstms074iavf79q5hg073ehv7cnvp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8Vk47mRnCyA0rchpW4ksJt33iZO_A_cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123016200143-v7lstms074iavf79q5hg073ehv7cnvp6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
