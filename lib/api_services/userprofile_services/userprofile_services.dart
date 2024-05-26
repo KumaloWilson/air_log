@@ -1,8 +1,44 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:logger/logger.dart';
 
 import '../../models/userprofile.dart';
 
 class UserProfileServices{
+  static final Logger _logger = Logger();
+
+  static Future<List<UserProfile>> fetchUsers() async {
+    final FirebaseFirestore firestore = FirebaseFirestore.instance;
+    try {
+      QuerySnapshot querySnapshot = await firestore.collection('users').get();
+      return querySnapshot.docs.map((doc) {
+        return UserProfile.fromJson(doc.data() as Map<String, dynamic>);
+      }).toList();
+    } catch (e) {
+      throw Exception("Error fetching users: $e");
+    }
+  }
+
+  static Future<void> updateUserStatus(String userId, bool isActive) async {
+
+    final FirebaseFirestore firestore = FirebaseFirestore.instance;
+    try {
+      await firestore.collection('users').doc(userId).update({
+        'active': isActive,
+      });
+    } catch (e) {
+      throw Exception("Error updating user status: $e");
+    }
+  }
+
+  static Future<void> deleteUser(String userId) async {
+    final FirebaseFirestore firestore = FirebaseFirestore.instance;
+    try {
+      await firestore.collection('users').doc(userId).delete();
+    } catch (e) {
+      throw Exception("Error deleting user: $e");
+    }
+  }
+
   static Future<String> saveUserDetailsToFirestore({
     required String userId,
     required String fullName,
@@ -69,6 +105,7 @@ class UserProfileServices{
       if (userDoc.exists) {
         return UserProfile.fromJson(userDoc.data() as Map<String, dynamic>);
       } else {
+        _logger.w('USER NOT FOUND  IN THE DATABASE PLEASE REGISTER');
         return null; // User does not exist
       }
     } catch (e) {

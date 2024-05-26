@@ -17,11 +17,11 @@ class MailServices{
 
     // Create our message.
     final message = Message()
-      ..from = Address(sender, 'Easy Insure')
+      ..from = Address(sender, 'AirLog')
       ..recipients.add(recipientEmail)
       ..subject = '$emailSubject at ${DateTime.now()}'
       ..text = emailBody
-      ..html = "<h1>Dear $recipientUserName </h1>\n<p>$emailBody</p>\n\n<h2>Best Regards </h2>\n<h2>Markiti Team</h2>";
+      ..html = "<h1>Dear $recipientUserName </h1>\n<p>$emailBody</p>\n\n<h2>Best Regards </h2>\n<h2>AirLog</h2>";
 
     try {
       final sendReport = await send(message, smtpServer);
