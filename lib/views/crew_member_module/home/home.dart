@@ -1,4 +1,5 @@
 import 'package:air_log/constant/colors.dart';
+import 'package:air_log/helpers/flight_helpers.dart';
 import 'package:air_log/helpers/helpers/genenal_helpers.dart';
 import 'package:air_log/utils/asset_utils/image_assets.dart';
 import 'package:air_log/views/crew_member_module/home/qr_scanner.dart';
@@ -119,32 +120,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   
-  Future<void> _fetchCheckInStatus() async {
-    try {
-      QuerySnapshot snapshot = await FirebaseFirestore.instance
-          .collection('crewSchedule')
-          .where('uid', isEqualTo: user!.uid)
-          .get();
-
-      if (snapshot.docs.isNotEmpty) {
-        setState(() {
-          _checkInStatus = CheckInStatus.fromFirestore(snapshot.docs.first);
-        });
-      } else {
-        setState(() {
-          _checkInStatus = CheckInStatus(isCheckedIn: false);
-        });
-      }
-
-      _checkIfUserIsLate(_checkInStatus);
-    } catch (e) {
-      _logger.e('Error fetching check-in status: $e');
-    } finally {
-      setState(() {
-        _isLoading = false;
-      });
-    }
-  }
 
   void _checkIfUserIsLate(CheckInStatus? status) {
     if (status == null || !status.isCheckedIn) {
@@ -177,6 +152,39 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     }
   }
-  
 
+  Future<void> _fetchCheckInStatus() async {
+    try {
+      // Get current date in YYYY-MM-DD format
+      final String today = FlightHelpers.getTodayDateString();
+
+      // Get the collection reference for today's date
+      final CollectionReference crewScheduleCollection = FirebaseFirestore.instance
+          .collection('crewSchedule')
+          .doc(today)
+          .collection('entries');
+
+      QuerySnapshot snapshot = await crewScheduleCollection
+          .where('uid', isEqualTo: user!.uid)
+          .get();
+
+      if (snapshot.docs.isNotEmpty) {
+        setState(() {
+          _checkInStatus = CheckInStatus.fromFirestore(snapshot.docs.first);
+        });
+      } else {
+        setState(() {
+          _checkInStatus = CheckInStatus(isCheckedIn: false);
+        });
+      }
+
+      _checkIfUserIsLate(_checkInStatus);
+    } catch (e) {
+      _logger.e('Error fetching check-in status: $e');
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
 }

@@ -1,17 +1,23 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:logger/logger.dart';
 
+import '../../helpers/flight_helpers.dart';
 import '../../models/flight_check_in_model.dart';
 
 class FlightServices {
   static final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
   static final Logger _logger = Logger();
-  static final CollectionReference _crewScheduleCollection = _firebaseFirestore.collection('crewSchedule');
 
   static Future<String> checkIn(CrewScheduleEntry entry) async {
     try {
+      // Get current date in YYYY-MM-DD format
+      final String today = FlightHelpers.getTodayDateString();
+
+      // Get the collection reference for today's date
+      final CollectionReference crewScheduleCollection = _firebaseFirestore.collection('crewSchedule').doc(today).collection('entries');
+
       // Adding the current date to the entry
-      await _crewScheduleCollection.add(entry.toJson());
+      await crewScheduleCollection.add(entry.toJson());
       _logger.i('Check-in successful');
       return 'success';
     } catch (e) {
@@ -22,8 +28,14 @@ class FlightServices {
 
   static Future<String> checkout({required String uid, required String signatureOut}) async {
     try {
+      // Get current date in YYYY-MM-DD format
+      final String today = FlightHelpers.getTodayDateString();
+
+      // Get the collection reference for today's date
+      final CollectionReference crewScheduleCollection = _firebaseFirestore.collection('crewSchedule').doc(today).collection('entries');
+
       // Look for the entry with the provided uid
-      final querySnapshot = await _crewScheduleCollection
+      final querySnapshot = await crewScheduleCollection
           .where('uid', isEqualTo: uid)
           .where('isCheckedIn', isEqualTo: true)
           .get();
@@ -57,6 +69,5 @@ class FlightServices {
       return e.toString();
     }
   }
-
 
 }
