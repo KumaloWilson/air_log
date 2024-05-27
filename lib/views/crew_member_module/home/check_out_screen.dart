@@ -149,7 +149,7 @@ class _QRScannerCheckOutScreenState extends State<QRScannerCheckOutScreen> {
                     showDialog(
                         context: context,
                         builder: (context) {
-                          return const CustomLoader(message: 'Checking IN');
+                          return const CustomLoader(message: 'Checking in');
                         }
                     );
 

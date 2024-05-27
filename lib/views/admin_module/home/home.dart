@@ -48,7 +48,11 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
           backgroundColor: Pallete.primaryColor,
           automaticallyImplyLeading: false,
           title: ListTile(
-            leading: const CircleAvatar(),
+            leading:  CircleAvatar(
+              backgroundImage: NetworkImage(
+                  user!.photoURL ?? MyNetworkImageAssets.defaultProfilePic
+              ),
+            ),
             title: const Text(
               'Good Morning!!',
               style: TextStyle(
@@ -81,12 +85,12 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
               Text(
                 "${planeProvider.planeNumber} : ${planeProvider.planeType}",
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Pallete.primaryColor,
                   fontWeight: FontWeight.bold
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               FadeInSlide(
@@ -233,7 +237,7 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
                 ),
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
 
