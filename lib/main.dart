@@ -1,3 +1,4 @@
+import 'package:air_log/providers/plane_provider.dart';
 import 'package:air_log/providers/user_provider.dart';
 import 'package:air_log/providers/userprofile_provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -28,6 +29,7 @@ Future main() async {
       providers: [
         ChangeNotifierProvider(create: (context) => UserProvider()),
         ChangeNotifierProvider(create: (context) => UserProfileProvider()),
+        ChangeNotifierProvider(create: (context) => PlaneProvider()),
       ],
       child: MyApp(),
     ),

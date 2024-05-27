@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:lottie/lottie.dart';
 import '../../../api_services/auth_methods/authorization_services.dart';
 import '../../../api_services/notifications_services/notification_services.dart';

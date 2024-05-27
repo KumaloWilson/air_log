@@ -80,4 +80,11 @@ class FlightServices {
       throw Exception("Error fetching check-ins: $e");
     }
   }
+
+  static Stream<DocumentSnapshot> listenForCheckIn(String date) {
+    final CollectionReference crewScheduleCollection = _firebaseFirestore.collection('crewSchedule').doc(date).collection('entries');
+    return crewScheduleCollection.snapshots().map((snapshot) {
+      return snapshot.docs.last;
+    });
+  }
 }
