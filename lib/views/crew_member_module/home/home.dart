@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:one_clock/one_clock.dart';
 
-import '../../../api_services/chat_services/chat_services.dart';
+import '../../../api_services/flight_services/chat_services.dart';
 import '../../../models/check_in_status.dart';
 import '../../../models/flight_check_in_model.dart';
 import 'check_out_screen.dart';

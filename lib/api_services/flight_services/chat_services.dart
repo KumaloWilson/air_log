@@ -70,4 +70,14 @@ class FlightServices {
     }
   }
 
+  static Future<List<CrewScheduleEntry>> getCheckInsByDate(String date) async {
+    try {
+      final CollectionReference crewScheduleCollection = _firebaseFirestore.collection('crewSchedule').doc(date).collection('entries');
+      final querySnapshot = await crewScheduleCollection.where('checkInTime', isNotEqualTo: null).get();
+      return querySnapshot.docs.map((doc) => CrewScheduleEntry.fromJson(doc.data() as Map<String, dynamic>)).toList();
+    } catch (e) {
+      _logger.e('Error fetching check-ins: $e');
+      throw Exception("Error fetching check-ins: $e");
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import 'package:air_log/helpers/flight_helpers.dart';
 import 'package:air_log/helpers/helpers/genenal_helpers.dart';
+import 'package:air_log/views/admin_module/home/total_check_ins/total_checkins.dart';
 import 'package:air_log/views/admin_module/home/total_employees/total_employees.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_barcodes/barcodes.dart';
@@ -26,16 +27,15 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
                   Expanded(
                     child: GestureDetector(
                       onTap: ()=> Helpers.temporaryNavigator(context, const TotalEmployees()),
-                      child: Container(
-                        child: const Text(
-                            'Total Employees'
-                        ),
+                      child: const Text(
+                          'Total Employees'
                       ),
                     ),
                   ),
 
                   Expanded(
-                    child: Container(
+                    child: GestureDetector(
+                      onTap: ()=> Helpers.temporaryNavigator(context, const TotalCheckInsScreen()),
                       child: const Text(
                           'Total Check in'
                       ),

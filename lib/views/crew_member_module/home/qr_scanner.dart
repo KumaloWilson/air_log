@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:air_log/api_services/chat_services/chat_services.dart';
+import 'package:air_log/api_services/flight_services/chat_services.dart';
 import 'package:air_log/helpers/helpers/genenal_helpers.dart';
 import 'package:air_log/models/flight_check_in_model.dart';
 import 'package:air_log/providers/userprofile_provider.dart';
