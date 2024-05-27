@@ -36,7 +36,7 @@ class _AdminCrewCheckQRCodeGenerationState extends State<AdminCrewCheckQRCodeGen
   }
 
   Future<void> _greetUser(String surname) async {
-    await flutterTts.speak('Welcome, $surname');
+    await flutterTts.speak('Welcome, $surname, We\'re glad to have you with us today. Have a productive and wonderful day!');
   }
 
   @override

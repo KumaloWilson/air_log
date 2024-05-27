@@ -1,6 +1,9 @@
+import 'dart:io';
+import 'package:syncfusion_flutter_xlsio/xlsio.dart' as xlsio;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:path_provider/path_provider.dart';
 import '../../../../api_services/flight_services/chat_services.dart';
 import '../../../../constant/colors.dart';
 import '../../../../helpers/flight_helpers.dart';
@@ -18,7 +21,7 @@ class _TotalCheckInsScreenState extends State<TotalCheckInsScreen> {
   late Future<List<CrewScheduleEntry>> _checkInsFuture;
   String _selectedDate = FlightHelpers.getTodayDateString();
   String _searchQuery = '';
-
+  List<CrewScheduleEntry> checkIns = [];
   @override
   void initState() {
     super.initState();
@@ -66,6 +69,11 @@ class _TotalCheckInsScreenState extends State<TotalCheckInsScreen> {
           IconButton(
             icon: const Icon(Icons.calendar_today),
             onPressed: () => _selectDate(context),
+          ),
+
+          IconButton(
+            icon: const Icon(Icons.download),
+            onPressed: ()=> _exportToExcel(checkIns),
           ),
         ],
         bottom: PreferredSize(
@@ -147,7 +155,7 @@ class _TotalCheckInsScreenState extends State<TotalCheckInsScreen> {
                   } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                     return const Center(child: Text('No check-ins found'));
                   } else {
-                    List<CrewScheduleEntry> checkIns = snapshot.data!;
+                     checkIns = snapshot.data!;
                     if (_searchQuery.isNotEmpty) {
                       checkIns = checkIns.where((entry) =>
                           entry.surname.toLowerCase().contains(_searchQuery.toLowerCase())).toList();
@@ -191,4 +199,50 @@ class _TotalCheckInsScreenState extends State<TotalCheckInsScreen> {
     final DateFormat formatter = DateFormat(format);
     return formatter.format(dateTime);
   }
+
+
+  Future<void> _exportToExcel(List<CrewScheduleEntry> checkIns) async {
+    // Create a new Excel Document.
+    final xlsio.Workbook workbook = xlsio.Workbook();
+    final xlsio.Worksheet sheet = workbook.worksheets[0];
+
+    // Add headers.
+    sheet.getRangeByName('A1').setText('Flight No');
+    sheet.getRangeByName('B1').setText('Surname');
+    sheet.getRangeByName('C1').setText('Staff Number');
+    sheet.getRangeByName('D1').setText('Check In');
+    sheet.getRangeByName('E1').setText('Signature');
+    sheet.getRangeByName('F1').setText('Check Out');
+    sheet.getRangeByName('G1').setText('Signature');
+
+    // Add data.
+    for (int i = 0; i < checkIns.length; i++) {
+      final entry = checkIns[i];
+      sheet.getRangeByName('A${i + 2}').setText(entry.flightNo);
+      sheet.getRangeByName('B${i + 2}').setText(entry.surname);
+      sheet.getRangeByName('C${i + 2}').setText(entry.staffNumber);
+      sheet.getRangeByName('D${i + 2}').setText(formatTimestamp(entry.checkInTime, 'HH:mm').toString());
+      sheet.getRangeByName('E${i + 2}').setText(entry.signatureIn);
+      sheet.getRangeByName('F${i + 2}').setText(entry.checkOutTime != null ? formatTimestamp(entry.checkOutTime!, 'HH:mm').toString() : '');
+      sheet.getRangeByName('G${i + 2}').setText(entry.signatureOut);
+    }
+
+    // Save the document.
+    final List<int> bytes = workbook.saveAsStream();
+    workbook.dispose();
+
+    // Get the path to save the file.
+    final directory = await getDownloadsDirectory();
+    final path = '${directory!.path}/CheckIns_${_selectedDate}.xlsx';
+    final file = File(path);
+
+    // Write the bytes to the file.
+    await file.writeAsBytes(bytes, flush: true);
+
+    // Provide feedback to the user.
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Excel file saved at $path')),
+    );
+  }
+
 }
