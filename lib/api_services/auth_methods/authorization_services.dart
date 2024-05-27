@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:logger/logger.dart';
-import 'package:air_log/api_services/chat_services/chat_services.dart';
+import 'package:air_log/api_services/flight_services/chat_services.dart';
 import 'package:air_log/api_services/mail_services/mail_services.dart';
 import 'package:air_log/api_services/notifications_services/notification_services.dart';
 import 'package:air_log/api_services/role_services/role_services.dart';

@@ -48,73 +48,80 @@ class _TotalEmployeesState extends State<TotalEmployees> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(120),
-        child: Container(
-          decoration: const BoxDecoration(
-            color: Pallete.primaryColor,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Container(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  children: [
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'All Employees',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 16),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(3),
-                      decoration: BoxDecoration(
-                          color: Pallete.primaryColor.withOpacity(0.6),
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black38,
-                              spreadRadius: 1,
-                              blurRadius: 1,
-                              offset: Offset(-1, -1),
-                            ),
-                            BoxShadow(
-                              color: Colors.white24,
-                              spreadRadius: 1,
-                              blurRadius: 1,
-                              offset: Offset(1, 1),
-                            ),
-                          ]),
-                      child: CustomTextField(
-                        labelText: 'Search name',
-                        labelStyle: TextStyle(
-                            color: Pallete.primaryColor.withOpacity(0.5)),
-                        defaultBoarderColor: Pallete.primaryColor,
-                        focusedBoarderColor: Colors.transparent,
-                        prefixIcon: Icon(
-                          Icons.search,
-                          color: Pallete.primaryColor.withOpacity(0.5),
-                        ),
-                        fillColor: Colors.white,
-                        filled: true,
-                        onChanged: _searchUsers,
+      appBar: AppBar(
+        iconTheme: const IconThemeData(
+          color: Colors.white
+        ),
+        title: const Text(
+          'All Employees',
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 16),
+        ),
+        centerTitle: true,
+        backgroundColor: Pallete.primaryColor,
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(80),
+          child: Container(
+            decoration: const BoxDecoration(
+              color: Pallete.primaryColor,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                        ],
                       ),
-                    ),
-                  ],
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(3),
+                        decoration: BoxDecoration(
+                            color: Pallete.primaryColor.withOpacity(0.6),
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black38,
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                offset: Offset(-1, -1),
+                              ),
+                              BoxShadow(
+                                color: Colors.white24,
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                offset: Offset(1, 1),
+                              ),
+                            ]),
+                        child: CustomTextField(
+                          labelText: 'Search name',
+                          labelStyle: TextStyle(
+                              color: Pallete.primaryColor.withOpacity(0.5)),
+                          defaultBoarderColor: Pallete.primaryColor,
+                          focusedBoarderColor: Colors.transparent,
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: Pallete.primaryColor.withOpacity(0.5),
+                          ),
+                          fillColor: Colors.white,
+                          filled: true,
+                          onChanged: _searchUsers,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
