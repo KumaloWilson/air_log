@@ -19,7 +19,6 @@ class _AdminNavBarState extends State<AdminNavBar> {
 
   final List<Widget> _screens = const [
     AdminHomeScreen(),
-    AdminCrewCheckQRCodeGeneration(),
     AdminProfileScreen(),
   ];
 
@@ -60,14 +59,11 @@ class _AdminNavBarState extends State<AdminNavBar> {
               duration: const Duration(milliseconds: 400),
               tabBackgroundColor: Colors.grey[100]!,
               color: Colors.black,
+              mainAxisAlignment: MainAxisAlignment.center,
               tabs: const [
                 GButton(
                   icon: LineIcons.home,
                   text: 'Home',
-                ),
-                GButton(
-                  icon: LineIcons.qrcode,
-                  text: 'QR Scan',
                 ),
                 GButton(
                   icon: LineIcons.user,

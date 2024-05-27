@@ -49,6 +49,7 @@ class _CrewMemberNavBarState extends State<CrewMemberNavBar> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
             child: GNav(
+              mainAxisAlignment: MainAxisAlignment.center,
               rippleColor: Pallete.primaryColor,
               hoverColor: Pallete.primaryColor,
               gap: 8,

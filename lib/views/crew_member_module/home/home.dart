@@ -2,6 +2,7 @@ import 'package:air_log/constant/colors.dart';
 import 'package:air_log/helpers/flight_helpers.dart';
 import 'package:air_log/helpers/helpers/genenal_helpers.dart';
 import 'package:air_log/utils/asset_utils/image_assets.dart';
+import 'package:air_log/utils/asset_utils/network_image_assets.dart';
 import 'package:air_log/views/crew_member_module/home/qr_scanner.dart';
 import 'package:air_log/views/widgets/custom_button.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -46,13 +47,15 @@ class _HomeScreenState extends State<HomeScreen> {
             'Good Morning!!',
             style: TextStyle(
               fontSize: 12,
+              color: Colors.white
             ),
           ),
           subtitle: Text(
-            user!.displayName ?? '',
+            user!.displayName ?? MyNetworkImageAssets.defaultProfilePic,
             style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
+              color: Colors.white
             ),
           ),
         ),
