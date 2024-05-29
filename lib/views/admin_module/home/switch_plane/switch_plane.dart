@@ -41,7 +41,7 @@ class _AdminSwitchPlaneNumberState extends State<AdminSwitchPlaneNumber> {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
-            fontSize: 16,
+            fontSize: 8,
           ),
         ),
         centerTitle: true,
@@ -103,7 +103,7 @@ class _AdminSwitchPlaneNumberState extends State<AdminSwitchPlaneNumber> {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(10),

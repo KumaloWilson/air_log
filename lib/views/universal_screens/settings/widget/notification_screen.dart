@@ -71,7 +71,7 @@ class _ChangeNotificationScreenState extends State<ChangeNotificationScreen>
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.all(16),
+            padding: EdgeInsets.all(8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -184,7 +184,7 @@ class _ChangeNotificationScreenState extends State<ChangeNotificationScreen>
 
   Widget SettingTile(BuildContext context, {String? title, String? subtitle, bool? email, bool? notification}){
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

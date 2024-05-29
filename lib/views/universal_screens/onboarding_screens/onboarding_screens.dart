@@ -8,11 +8,10 @@ import '../authorization_screens/auth_handler.dart';
 
 class OnBoardingPage extends StatefulWidget {
   final Widget introPage1;
-  final Widget introPage2;
   final Widget introPage3;
 
 
-  const OnBoardingPage({super.key, required this.introPage1, required this.introPage2, required this.introPage3, });
+  const OnBoardingPage({super.key, required this.introPage1, required this.introPage3, });
 
   @override
   _OnBoardingPageState createState() => _OnBoardingPageState();
@@ -36,7 +35,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 controller: _controller,
                 onPageChanged: (index){
                   setState(() {
-                    if(index == 2)
+                    if(index == 1)
                     {
                       onLastPage = true;
                     }
@@ -48,7 +47,6 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                 },
                 children: [
                   widget.introPage1,
-                  widget.introPage2,
                   widget.introPage3,
                 ],
               ),
@@ -67,12 +65,12 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
                     ),
                     onTap: (){
-                      _controller.jumpToPage(2);
+                      _controller.jumpToPage(1);
                     },
                   ),
                   SmoothPageIndicator(
                     controller: _controller,
-                    count: 3,
+                    count: 2,
                     effect: WormEffect(
                       spacing:  5.0,
                       dotColor:  Pallete.primaryColor.withOpacity(0.2),
@@ -88,8 +86,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       ),
                     ),
                     onTap: () async{
-                      await SharedPreferencesHelper.updateOnboardingStatus(true);
-                      Helpers.permanentNavigator(context, const AuthHandler());
+                      await SharedPreferencesHelper.updateOnboardingStatus(true).then((value){
+                        Helpers.permanentNavigator(context, const AuthHandler());
+                      });
                     },
                   ) else GestureDetector(
                     child: const Text(
@@ -112,3 +111,4 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     );
   }
 }
+

@@ -66,7 +66,7 @@ class CustomDropDown extends StatelessWidget {
                 'Select',
                 style: TextStyle(color: Colors.grey),
               ),
-              elevation: 16,
+              elevation: 8,
               borderRadius: BorderRadius.circular(10),
               dropdownColor: Colors.white,
             ),

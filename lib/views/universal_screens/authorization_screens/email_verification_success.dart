@@ -16,7 +16,7 @@ class AccountVerificationSuccessful extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -35,7 +35,7 @@ class AccountVerificationSuccessful extends StatelessWidget {
                     'Verification Successful',
                     style: TextStyle(
                         color: Pallete.lightPrimaryTextColor,
-                        fontSize: 16,
+                        fontSize: 8,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(

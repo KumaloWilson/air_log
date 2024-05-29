@@ -61,7 +61,7 @@ class _TotalCheckInsScreenState extends State<TotalCheckInsScreen> {
           style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              fontSize: 16),
+              fontSize: 8),
         ),
         centerTitle: true,
         backgroundColor: Pallete.primaryColor,
@@ -87,7 +87,7 @@ class _TotalCheckInsScreenState extends State<TotalCheckInsScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Container(
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(8),
                   child: Column(
                     children: [
                       const Row(
@@ -96,7 +96,7 @@ class _TotalCheckInsScreenState extends State<TotalCheckInsScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 16,
+                        height: 8,
                       ),
                       Container(
                         padding: const EdgeInsets.all(3),
@@ -141,7 +141,7 @@ class _TotalCheckInsScreenState extends State<TotalCheckInsScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
             Expanded(

@@ -25,7 +25,7 @@ class _OnUpDateDialogState extends State<OnUpDateDialog> {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -39,7 +39,7 @@ class _OnUpDateDialogState extends State<OnUpDateDialog> {
                 width: 100,
             ),
             SizedBox(
-              height: 16,
+              height: 8,
             ),
 
             Text(
@@ -52,7 +52,7 @@ class _OnUpDateDialogState extends State<OnUpDateDialog> {
             ),
 
             SizedBox(
-              height: 16,
+              height: 8,
             ),
 
             CustomTextField(
@@ -65,7 +65,7 @@ class _OnUpDateDialogState extends State<OnUpDateDialog> {
             ),
 
             SizedBox(
-              height: 16,
+              height: 8,
             ),
 
             Row(

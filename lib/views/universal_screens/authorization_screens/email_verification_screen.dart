@@ -39,7 +39,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(65),
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: EdgeInsets.all(8),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -68,7 +68,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               SizedBox(
@@ -86,7 +86,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                       'Verify you email address',
                       style: TextStyle(
                           color: Pallete.lightPrimaryTextColor,
-                          fontSize: 16,
+                          fontSize: 8,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(

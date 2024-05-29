@@ -57,7 +57,7 @@ class _TotalEmployeesState extends State<TotalEmployees> {
           style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
-              fontSize: 16),
+              fontSize: 8),
         ),
         centerTitle: true,
         backgroundColor: Pallete.primaryColor,
@@ -72,7 +72,7 @@ class _TotalEmployeesState extends State<TotalEmployees> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Container(
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(8),
                   child: Column(
                     children: [
                       const Row(
@@ -81,7 +81,7 @@ class _TotalEmployeesState extends State<TotalEmployees> {
                         ],
                       ),
                       const SizedBox(
-                        height: 16,
+                        height: 8,
                       ),
                       Container(
                         padding: const EdgeInsets.all(3),
@@ -129,7 +129,7 @@ class _TotalEmployeesState extends State<TotalEmployees> {
         length: 3,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 16.0,
+            horizontal: 8.0,
           ),
           child: Column(
             children: <Widget>[

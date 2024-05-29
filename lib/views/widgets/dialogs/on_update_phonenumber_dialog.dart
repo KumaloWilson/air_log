@@ -28,7 +28,7 @@ class _OnUpDatePhoneNumberDialogState extends State<OnUpDatePhoneNumberDialog> {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -42,7 +42,7 @@ class _OnUpDatePhoneNumberDialogState extends State<OnUpDatePhoneNumberDialog> {
               width: 100,
             ),
             SizedBox(
-              height: 16,
+              height: 8,
             ),
 
             Text(
@@ -55,7 +55,7 @@ class _OnUpDatePhoneNumberDialogState extends State<OnUpDatePhoneNumberDialog> {
             ),
 
             SizedBox(
-              height: 16,
+              height: 8,
             ),
 
             FadeInSlide(
@@ -82,7 +82,7 @@ class _OnUpDatePhoneNumberDialogState extends State<OnUpDatePhoneNumberDialog> {
             ),
 
             SizedBox(
-              height: 16,
+              height: 8,
             ),
 
             Row(

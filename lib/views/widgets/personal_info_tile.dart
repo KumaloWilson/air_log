@@ -14,7 +14,7 @@ class PersonalTile extends StatelessWidget {
       onTap: onTap,
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 8),
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
@@ -31,7 +31,7 @@ class PersonalTile extends StatelessWidget {
             ),
 
             SizedBox(
-              width: 16,
+              width: 8,
             ),
 
             Text(

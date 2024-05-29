@@ -52,37 +52,37 @@ class _InitialRoleSelectionScreenState
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
                 'Welcome to AirLog',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.black,
-                    fontSize: 16,
+                    fontSize: 8,
                     fontWeight: FontWeight.w500)),
           ],
         ),
         bottomNavigationBar: Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           height: 320,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("What's your role ?",
+              const Text("What's your role ?",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Pallete.primaryColor,
-                      fontSize: 16,
+                      fontSize: 8,
                       fontWeight: FontWeight.bold)),
-              Text("Please choose how you'd like to use our app",
+              const Text("Please choose how you'd like to use our app",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Pallete.primaryColor,
                     fontSize: 12,
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Column(
@@ -105,7 +105,7 @@ class _InitialRoleSelectionScreenState
                               center: "Crew Member",
                               icon: FontAwesomeIcons.user),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 8,
                         ),
                         Expanded(
@@ -128,7 +128,7 @@ class _InitialRoleSelectionScreenState
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               FadeInSlide(
@@ -139,7 +139,7 @@ class _InitialRoleSelectionScreenState
                         : Pallete.primaryColor,
                     width: screenWidth,
                     borderRadius: 10,
-                    child: Text(
+                    child: const Text(
                       'Continue',
                       style: TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.white),
@@ -149,9 +149,11 @@ class _InitialRoleSelectionScreenState
                         Fluttertoast.showToast(msg: 'Please select a role');
                       } else {
                         await SharedPreferencesHelper.cacheUserRole(
-                            role: userRole!);
-                        await SharedPreferencesHelper.checkOnBoardingStatus();
-                        Helpers.permanentNavigator(context, AuthHandler());
+                            role: userRole!
+                        );
+                        await SharedPreferencesHelper.checkOnBoardingStatus().then((value){
+                          Helpers.permanentNavigator(context, const AuthHandler());
+                        });
                       }
                     }),
               )
@@ -171,7 +173,7 @@ class _InitialRoleSelectionScreenState
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(10),
@@ -183,7 +185,7 @@ class _InitialRoleSelectionScreenState
               size: 60,
               color: textIconColour,
             ),
-            SizedBox(
+            const SizedBox(
               height: 18,
             ),
             Text(
