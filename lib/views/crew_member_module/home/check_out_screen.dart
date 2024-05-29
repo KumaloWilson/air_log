@@ -1,6 +1,5 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:air_log/api_services/flight_services/chat_services.dart';
 import 'package:air_log/helpers/helpers/genenal_helpers.dart';
 import 'package:air_log/models/flight_check_in_model.dart';
@@ -8,7 +7,6 @@ import 'package:air_log/providers/userprofile_provider.dart';
 import 'package:air_log/views/universal_screens/authorization_screens/auth_handler.dart';
 import 'package:air_log/views/widgets/custom_loader.dart';
 import 'package:air_log/views/widgets/dialogs/confirmation_dialog.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

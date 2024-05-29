@@ -59,7 +59,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   children: [
 
                     Container(
-                      padding: EdgeInsets.all(16),
+                      padding: EdgeInsets.all(8),
                       color: Colors.grey.shade100,
                       child: Row(
                         children: [
@@ -96,7 +96,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
 
                     Container(
-                      padding: EdgeInsets.all(16),
+                      padding: EdgeInsets.all(8),
                       color: Colors.grey.shade100,
                       child: Row(
                         children: [
@@ -131,7 +131,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
 
                     Container(
-                      padding: EdgeInsets.all(16),
+                      padding: EdgeInsets.all(8),
                       color: Colors.grey.shade100,
                       child: Row(
                         children: [
@@ -254,7 +254,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Divider(
               color: Colors.grey.shade200,
             ),

@@ -30,11 +30,11 @@ class _SignUpState extends State<SignUp> {
     double screenWidth = MediaQuery.sizeOf(context).width;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: [
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             FadeInSlide(
               duration: 1.0,
@@ -49,7 +49,7 @@ class _SignUpState extends State<SignUp> {
             ),
             Container(
               padding: const EdgeInsets.all(20),
-              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
               decoration: BoxDecoration(
                 color: Colors.grey.shade100,
                 borderRadius: BorderRadius.circular(20),
@@ -130,7 +130,7 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             FadeInSlide(
               duration: 2.2,
@@ -231,7 +231,7 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             FadeInSlide(
               duration: 2.8,
@@ -254,7 +254,7 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             FadeInSlide(
               duration: 3.0,

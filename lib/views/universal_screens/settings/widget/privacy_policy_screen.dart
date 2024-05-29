@@ -110,7 +110,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen>
                                         .displaySmall
                                         ?.copyWith(
                                             color: Colors.black,
-                                            fontSize: 16,
+                                            fontSize: 8,
                                             fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
@@ -132,7 +132,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen>
                                         .displaySmall
                                         ?.copyWith(
                                             color: Colors.black,
-                                            fontSize: 16,
+                                            fontSize: 8,
                                             fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
@@ -176,7 +176,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen>
                                         .displaySmall
                                         ?.copyWith(
                                             color: Colors.black,
-                                            fontSize: 16,
+                                            fontSize: 8,
                                             fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
@@ -209,7 +209,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen>
                                         .displaySmall
                                         ?.copyWith(
                                             color: Colors.black,
-                                            fontSize: 16,
+                                            fontSize: 8,
                                             fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
@@ -242,7 +242,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen>
                                         .displaySmall
                                         ?.copyWith(
                                             color: Colors.black,
-                                            fontSize: 16,
+                                            fontSize: 8,
                                             fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
@@ -276,7 +276,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen>
                                         .displaySmall
                                         ?.copyWith(
                                             color: Colors.black,
-                                            fontSize: 16,
+                                            fontSize: 8,
                                             fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
@@ -342,7 +342,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen>
                                         .displaySmall
                                         ?.copyWith(
                                             color: Colors.black,
-                                            fontSize: 16,
+                                            fontSize: 8,
                                             fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(
@@ -364,7 +364,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen>
                                         .displaySmall
                                         ?.copyWith(
                                             color: Colors.black,
-                                            fontSize: 16,
+                                            fontSize: 8,
                                             fontWeight: FontWeight.bold),
                                   ),
                                   TextSpan(

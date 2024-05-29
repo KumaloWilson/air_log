@@ -38,7 +38,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         child: ListView(
           children: [
             CircleAvatar(
@@ -50,7 +50,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
             ),
             Container(
               padding: const EdgeInsets.all(20),
-              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
               decoration: BoxDecoration(
                 color: Colors.grey.shade100,
                 borderRadius: BorderRadius.circular(20),
@@ -98,7 +98,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 16,
+                    height: 8,
                   ),
                   CustomTextField(
                     controller: confirmPasswordController,

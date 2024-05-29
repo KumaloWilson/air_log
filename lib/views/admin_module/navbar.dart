@@ -1,4 +1,3 @@
-import 'package:air_log/views/admin_module/crew_check/crew_check_qr_code.dart';
 import 'package:air_log/views/admin_module/home/home.dart';
 import 'package:air_log/views/admin_module/profile/profile.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +5,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
 import '../../constant/colors.dart';
+import '../universal_screens/profile/profile_screen.dart';
 
 class AdminNavBar extends StatefulWidget {
   const AdminNavBar({super.key});
@@ -19,7 +19,7 @@ class _AdminNavBarState extends State<AdminNavBar> {
 
   final List<Widget> _screens = const [
     AdminHomeScreen(),
-    AdminProfileScreen(),
+    ProfileScreen(),
   ];
 
   @override

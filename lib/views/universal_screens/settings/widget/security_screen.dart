@@ -64,7 +64,7 @@ class _SecurityScreenState extends State<SecurityScreen>
         children: [
 
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(8),
             color: Colors.grey.shade100,
             child: const Row(
               children: [
@@ -87,7 +87,7 @@ class _SecurityScreenState extends State<SecurityScreen>
               radioButtonWidth: 22.0
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Divider(
               color: Colors.grey.shade300,
             ),
@@ -101,7 +101,7 @@ class _SecurityScreenState extends State<SecurityScreen>
           ),
 
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(8),
             color: Colors.grey.shade100,
             child: const Row(
               children: [
@@ -125,7 +125,7 @@ class _SecurityScreenState extends State<SecurityScreen>
           ),
 
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(8),
             color: Colors.grey.shade100,
             child: const Row(
               children: [
@@ -148,7 +148,7 @@ class _SecurityScreenState extends State<SecurityScreen>
           ),
 
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(8),
             color: Colors.grey.shade100,
             child: const Row(
               children: [
@@ -179,7 +179,7 @@ class _SecurityScreenState extends State<SecurityScreen>
 
   Widget SettingTile(BuildContext context, {String? title, String? subtitle, bool? selectOption, double? radioButtonWidth}){
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

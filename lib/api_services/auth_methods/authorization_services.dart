@@ -70,9 +70,9 @@ class AuthServices {
           await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailAddress,
         password: password,
-      );
-
-      Helpers.back(context);
+      ).then((value){
+            Helpers.back(context);
+      });
 
       // Handle successful login (optional, remove if not needed)
       _logger.i('Login successful: ${loginResponse.user!.email}');

@@ -12,7 +12,7 @@ class IntroPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
@@ -24,9 +24,9 @@ class IntroPage1 extends StatelessWidget {
                 fit: BoxFit.fill, height: 350),
             Text(
               selectedRole == UserRole.admin
-                  ? 'Register\nTo Get started your Clients'
+                  ? 'Register\nTo Get started your Crew'
                   : selectedRole == UserRole.crewMember
-                      ? 'Register\nTo Get started with get the best insurance services with ease'
+                      ? 'Register\nTo Get started with automated check in'
                           : '',
 
               ///PLEASE REPLACE WITH A TEXT
@@ -35,7 +35,8 @@ class IntroPage1 extends StatelessWidget {
               style: TextStyle(
                   color: Pallete.lightPrimaryTextColor,
                   fontWeight: FontWeight.w500,
-                  fontSize: 16),
+                  fontSize: 8
+              ),
             )
           ],
         ),

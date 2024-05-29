@@ -181,7 +181,7 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
         required String center,
         required IconData icon}) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(10),

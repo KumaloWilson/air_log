@@ -23,7 +23,7 @@ class ForgotPasswordScreen extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         child: ListView(
           children: [
             SizedBox(
@@ -38,7 +38,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.all(20),
-              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
               decoration: BoxDecoration(
                 color: Colors.grey.shade100,
                 borderRadius: BorderRadius.circular(20),

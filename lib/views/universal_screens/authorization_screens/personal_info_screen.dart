@@ -58,7 +58,7 @@ class _AdditionalPersonalInfoScreenState
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            margin: const EdgeInsets.all(16),
+            margin: const EdgeInsets.all(8),
             child: const Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -117,11 +117,11 @@ class _AdditionalPersonalInfoScreenState
       ),
       bottomNavigationBar: Container(
         height: 500,
-        margin: const EdgeInsets.only(left: 16, right: 16),
-        padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.only(left: 8, right: 8),
+        padding: const EdgeInsets.all(8),
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(16), topRight: Radius.circular(16)),
+                topLeft: Radius.circular(8), topRight: Radius.circular(8)),
             color: Colors.white),
         child: ListView(
           children: [
@@ -248,7 +248,7 @@ class _AdditionalPersonalInfoScreenState
               padding: const EdgeInsets.all(3),
               size: 50, //default : 40
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
             CustomButton(
                 btnColor: Pallete.primaryColor,
                 width: screenWidth,

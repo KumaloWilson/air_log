@@ -11,7 +11,7 @@ class IntroPage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
@@ -21,7 +21,7 @@ class IntroPage3 extends StatelessWidget {
           children: [
             Lottie.asset(
                 selectedRole == UserRole.crewMember
-                    ? AnimationAssets.onTimeDelivery
+                    ? AnimationAssets.chatsAnimation
                     : selectedRole == UserRole.admin
                         ? AnimationAssets.chatsAnimation
                             : AnimationAssets.applicationReviewAnimation,
@@ -35,13 +35,13 @@ class IntroPage3 extends StatelessWidget {
               selectedRole == UserRole.crewMember
                   ? 'Ready ?\nWhat are you waiting for ?'
                   : selectedRole == UserRole.admin
-                  ? 'Remote Services\nGet our services from the comfort of your home'
+                  ? 'Ready ?\nWhat are you waiting for ?'
                   : '',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Pallete.lightPrimaryTextColor,
                   fontWeight: FontWeight.w500,
-                  fontSize: 16),
+                  fontSize: 8),
             )
           ],
         ),

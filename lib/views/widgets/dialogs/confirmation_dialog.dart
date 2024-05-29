@@ -17,7 +17,7 @@ class CustomConfirmationDialog extends StatelessWidget {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -32,7 +32,7 @@ class CustomConfirmationDialog extends StatelessWidget {
                 repeat: false
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
 
             Text(
@@ -45,7 +45,7 @@ class CustomConfirmationDialog extends StatelessWidget {
             ),
 
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
 
             Row(

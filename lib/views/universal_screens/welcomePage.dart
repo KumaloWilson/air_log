@@ -1,6 +1,5 @@
 import 'package:air_log/constant/colors.dart';
 import 'package:air_log/global/global.dart';
-import 'package:air_log/utils/asset_utils/image_assets.dart';
 import 'package:air_log/views/universal_screens/onboarding_screens/intro_page1.dart';
 import 'package:air_log/views/universal_screens/onboarding_screens/intro_page2.dart';
 import 'package:air_log/views/universal_screens/onboarding_screens/onboarding_screens.dart';
@@ -24,13 +23,13 @@ class WelcomePage extends StatelessWidget {
         )
       ),
       bottomNavigationBar: Container(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(8),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Center(
                 child: Text(
-              'Welcome to CovRe\n${Helpers.capitalizeFirstLetter(selectedRole.toString().split('.').last)} Center',
+              'Welcome to AirLog \n${Helpers.capitalizeFirstLetter(selectedRole.toString().split('.').last)} Center',
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 20,
@@ -50,7 +49,6 @@ class WelcomePage extends StatelessWidget {
                     context,
                     OnBoardingPage(
                         introPage1: IntroPage1(selectedRole: selectedRole),
-                        introPage2: IntroPage2(selectedRole: selectedRole),
                         introPage3: IntroPage3(selectedRole: selectedRole),
                     )
                 );

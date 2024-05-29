@@ -1,10 +1,9 @@
 import 'package:air_log/views/crew_member_module/home/home.dart';
-import 'package:air_log/views/crew_member_module/profile/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import '../../../constant/colors.dart';
+import '../universal_screens/profile/profile_screen.dart';
 
 class CrewMemberNavBar extends StatefulWidget {
   const CrewMemberNavBar({super.key});

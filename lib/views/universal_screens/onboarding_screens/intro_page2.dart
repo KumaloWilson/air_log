@@ -14,7 +14,7 @@ class IntroPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
@@ -42,7 +42,7 @@ class IntroPage2 extends StatelessWidget {
               style: TextStyle(
                   color: Pallete.lightPrimaryTextColor,
                   fontWeight: FontWeight.w500,
-                  fontSize: 16),
+                  fontSize: 8),
             )
           ],
         ),

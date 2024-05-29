@@ -74,7 +74,7 @@ class _EditProfileScreenState extends State<EditProfileScreen>
                               .displaySmall
                               ?.copyWith(
                                   color: Colors.black,
-                                  fontSize: 16,
+                                  fontSize: 8,
                                   fontWeight: FontWeight.bold),
                         ),
                       ],

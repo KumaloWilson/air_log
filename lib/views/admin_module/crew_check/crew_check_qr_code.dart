@@ -49,18 +49,18 @@ class _AdminCrewCheckQRCodeGenerationState extends State<AdminCrewCheckQRCodeGen
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
-            fontSize: 16,
+            fontSize: 8,
           ),
         ),
         centerTitle: true,
         backgroundColor: Pallete.primaryColor,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Container(
             padding: const EdgeInsets.all(20),
-            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
             decoration: BoxDecoration(
               color: Colors.grey.shade100,
               borderRadius: BorderRadius.circular(20),

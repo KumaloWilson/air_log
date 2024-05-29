@@ -22,7 +22,7 @@ class ResendResetEmailScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(65),
         child: Container(
-          padding: EdgeInsets.all(16),
+          padding: EdgeInsets.all(8),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -51,7 +51,7 @@ class ResendResetEmailScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               SizedBox(
@@ -69,7 +69,7 @@ class ResendResetEmailScreen extends StatelessWidget {
                       'Password Reset Email Sent',
                       style: TextStyle(
                           color: Pallete.lightPrimaryTextColor,
-                          fontSize: 16,
+                          fontSize: 8,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(

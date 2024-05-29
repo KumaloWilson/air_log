@@ -1,4 +1,5 @@
 import 'package:air_log/utils/asset_utils/image_assets.dart';
+import 'package:air_log/views/universal_screens/authorization_screens/auth_handler.dart';
 import 'package:air_log/views/universal_screens/authorization_screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -34,7 +35,7 @@ class _LoginState extends State<Login> {
     double screenWidth = MediaQuery.sizeOf(context).width;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: [
             FadeInSlide(
@@ -49,7 +50,7 @@ class _LoginState extends State<Login> {
             ),
             Container(
               padding: const EdgeInsets.all(20),
-              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
               decoration: BoxDecoration(
                 color: Colors.grey.shade100,
                 borderRadius: BorderRadius.circular(20),
@@ -134,11 +135,14 @@ class _LoginState extends State<Login> {
                           await AuthServices.login(
                               context: context,
                               emailAddress: emailController.text.trim(),
-                              password: passwordController.text.trim());
+                              password: passwordController.text.trim()
+                          ).then((value){
+                            Helpers.temporaryNavigator(context, const AuthHandler());
+                          });
                         }),
                   ),
                   const SizedBox(
-                    height: 16,
+                    height: 8,
                   ),
                   FadeInSlide(
                     duration: 2.2,
@@ -167,7 +171,7 @@ class _LoginState extends State<Login> {
             Column(
               children: [
                 const SizedBox(
-                  height: 16,
+                  height: 8,
                 ),
                 FadeInSlide(
                   duration: 2.4,
@@ -280,7 +284,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 8,
                 ),
                 FadeInSlide(
                   duration: 3.0,
@@ -305,7 +309,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 const SizedBox(
-                  height: 16,
+                  height: 8,
                 ),
                 FadeInSlide(
                   duration: 3.2,
